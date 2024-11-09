@@ -4,6 +4,7 @@
 ----------------------------------------------------------------
 
 Support:   https://discord.gg/hZNJrUu7
+
 On GitHub:   https://github.com/Realism-Studios/Realism-Messages-Editor 
 
 ----------------------------------------------------------------
