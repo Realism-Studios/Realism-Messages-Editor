@@ -10,6 +10,7 @@ On GitHub:   https://github.com/Realism-Studios/Realism-Messages-Editor
 ----------------------------------------------------------------
 
 Newer Messages Editor is a program which can edit and save copies of Messages.bin from Newer Super Mario Bros. Wii.
+
 REALISM Messages Editor is a program that does the same thing, but lets you add many more messages. It also works with Newer.
 
 ----------------------------------------------------------------
