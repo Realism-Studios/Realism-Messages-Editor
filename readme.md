@@ -3,8 +3,8 @@
 
 ----------------------------------------------------------------
 
-Support:   http://rvlution.net/forums/  
-On GitHub: https://github.com/RoadrunnerWMC/Newer-Messages-Editor  
+Support:   https://discord.gg/hZNJrUu7
+On GitHub:   https://github.com/Realism-Studios/Realism-Messages-Editor 
 
 ----------------------------------------------------------------
 
