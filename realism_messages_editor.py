@@ -377,7 +377,7 @@ class MessageEditor(QtWidgets.QWidget):
 
         # Create widgets
         self.id = QtWidgets.QSpinBox()
-        self.id.setMaximum(65024)
+        self.id.setMaximum(65536)
         self.title = QtWidgets.QLineEdit()
         self.title.setMaxLength(255)
         self.text = QtWidgets.QPlainTextEdit()
