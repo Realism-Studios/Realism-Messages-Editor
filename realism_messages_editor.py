@@ -30,7 +30,7 @@
 ################################################################
 
 
-version = '1.1'
+version = '1.Ok'
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
