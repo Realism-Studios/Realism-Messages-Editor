@@ -30,14 +30,15 @@
 ################################################################
 
 
-version = '1.3'
+version = '1.1'
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import Qt
 import sys
 
 
 
-
+maxMessages = 65024 # by default.
 
 ################################################################
 ################################################################
@@ -377,16 +378,22 @@ class MessageEditor(QtWidgets.QWidget):
 
         # Create widgets
         self.id = QtWidgets.QSpinBox()
-        self.id.setMaximum(65536)
+        self.id.setMaximum(maxMessages)
+        self.id.valueChanged.connect(self.show_id)
         self.title = QtWidgets.QLineEdit()
         self.title.setMaxLength(255)
         self.text = QtWidgets.QPlainTextEdit()
+        self.ReggieID = QtWidgets.QLabel()
+        self.ReggieID.setTextInteractionFlags(Qt.TextSelectableByMouse)
         self.text.setLineWrapMode(self.text.NoWrap)
+        firstValue = self.id.value()
+        self.ReggieID.setNum(firstValue+256)
 
         # Add some tooltips
         self.id.setToolTip('<b>ID:</b><br>This is the value the Message Box sprite uses to find messages. Make sure you don\'t repeat IDs!')
         self.title.setToolTip('<b>Title:</b><br>Changes the text which will appear on the top of the message box')
         self.text.setToolTip('<b>Text:</b><br>Changes the text which will appear inside the main portion of the message box')
+        self.ReggieID.setToolTip('<b>Reggie Message ID:</b><br>Revolutionary technology that shows you the Message ID to put into Reggie Next.')
 
         # Set up handlers
         self.id.valueChanged.connect(self.HandleIdChanged)
@@ -396,12 +403,18 @@ class MessageEditor(QtWidgets.QWidget):
         # Set up a layout
         L = QtWidgets.QFormLayout()
         L.addRow('ID:', self.id)
+        L.addRow('Reggie Message ID:', self.ReggieID)
         L.addRow('Title:', self.title)
         L.addRow('Text:', self.text)
         self.setLayout(L)
 
         # Clear everything
         self.clear()
+
+    # Show reggie id method because i HATE python's
+    def show_id(self):
+        value = self.id.value()
+        self.ReggieID.setNum(value+256) 
 
     def clear(self):
         """Clears all data from the MessageEditor"""
@@ -505,7 +518,7 @@ class CheckDuplicateIDsDlg(QtWidgets.QDialog):
         self.setLayout(L)
         
 
-        
+
 
 
 ################################################################
@@ -662,7 +675,6 @@ class MainWindow(QtWidgets.QMainWindow):
         dlg.setMinimumWidth(384)
         buttonBox.accepted.connect(dlg.accept)
         dlg.exec_()
-
 
 ################################################################
 ################################################################

@@ -1,23 +1,16 @@
-# Realism Messages Editor
-(1.0)
+# Newer Messages Editor
+(1.3)
 
 ----------------------------------------------------------------
 
-Support:   https://discord.gg/hZNJrUu7
-
-On GitHub:   https://github.com/Realism-Studios/Realism-Messages-Editor 
-
-----------------------------------------------------------------
-
-Newer Messages Editor is a program which can edit and save copies of Messages.bin from Newer Super Mario Bros. Wii.
-
-REALISM Messages Editor is a program that does the same thing, but lets you add many more messages. It also works with Newer.
+Support:   http://rvlution.net/forums/  
+On GitHub: https://github.com/RoadrunnerWMC/Newer-Messages-Editor  
 
 ----------------------------------------------------------------
 
-### Known issues
+Newer Messages Editor is a program which can edit and save copies of Messages.bin from Newer Super Mario Bros. Wii.  
 
-The game is known not to load messages with extremely high message ids. Although you generally won't be using message id 65536, this is still a bug.
+----------------------------------------------------------------
 
 ### Getting Started
 
@@ -42,7 +35,6 @@ You can replace `python3` with the path to python.exe (including "python.exe" at
 
 Developers:
  * RoadrunnerWMC - Developer
- * mods by GuttermanGaming
 
 ### Dependencies/Libraries/Resources
 
@@ -60,9 +52,6 @@ See the license file in the distribution for information.
 ----------------------------------------------------------------
 
 ## Changelog
-
-Realism Release 1.0
-* Allow 65536 max messages (still unstable)
 
 Release 1.3 (unreleased)
  * No changes yet
